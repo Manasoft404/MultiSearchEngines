@@ -11,9 +11,7 @@
  <body>
    <?php  ?>
    <form class="" action="#" method="post">
-     <label for="search">Search For :</label> <input type="text" name="search" value="<?php if (isset($_POST('search'))) {
-       // code...
-     } ?>">
+     <label for="search">Search For :</label> <input type="text" name="search" value=""/> <br/>
      <label for="site">Search on:</label>
         <select class="site" name="site">
           <option value="google">Google</option>
@@ -24,11 +22,10 @@
           <option value="yahoo_image">Yahoo Images</option>
         </select><br />
       <label for="type">Display Results</label>
-          <select class="site" name="site">
-            <option value="google">Google</option>
-            <option value="google_image">Google Images</option>
-            <option value="bing">Bing</option>
-
+          <select class="type" name="type">
+            <option value="site">In a new window</option>
+            <option value="offsite">On their site (current tab)</option>
+            <option value="insite">On This site</option>
           </select>
 
 
