@@ -1,7 +1,6 @@
 <?php
-
+include("core/init.php");
 ?>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
  <head>
@@ -27,8 +26,6 @@
             <option value="offsite">On their site (current tab)</option>
             <option value="insite">On This site</option>
           </select>
-
-
    </form>
 
  </body>
