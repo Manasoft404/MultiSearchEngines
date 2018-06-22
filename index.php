@@ -1,5 +1,17 @@
 <?php
-include("core/init.php");
+  include("core/init.php");
+  $errors = array();
+  if (isset($_POST['site'],$_POST['search'],$_POST['type'])) {
+    $url = make_url($_POST['site'],$_POST['search']);
+    if ($url===false) {
+      $errors[] ="Please enter a valid search term.";
+    }else {
+      $display = display_url($url,$_POST['type']);
+      if ($display === false) {
+          $errors[] = "We could not create the URL display.";
+      }
+    }
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -8,7 +20,29 @@ include("core/init.php");
    <title>Manasoft404 | Multi Search Engines</title>
  </head>
  <body>
-   <?php  ?>
+   <?php
+      if (empty($errors)=== false) {
+        ?>
+        <ul>
+          <li>
+            <?php
+            echo implode("</li><li>",$errors);
+             ?>
+          </li>
+        </ul>
+        <?php
+      }else {
+        if (isset($url,$display)) {
+            if ($url === $display) {
+              header("Location: {$display}");
+              exit;
+            }else {
+              echo "<div><p>{$display}</p></div>";
+            }
+        }
+      }
+     ?>
+
    <form class="" action="#" method="post">
      <label for="search">Search For :</label> <input type="text" name="search" value=""/> <br/>
      <label for="site">Search on:</label>

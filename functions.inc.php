@@ -36,7 +36,7 @@
   //Display the URL with the given method
   public function display_url($url,$type)
   {
-    $url = htmlentities($url);
+    //$url = htmlentities($url);
     if ($type ==="site") {
       $display = "The URL to your search is: <a href='{$url}' target='_BLANK'>{$url}</a>";
     }elseif ($type ==="offsite") {
