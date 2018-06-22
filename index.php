@@ -44,7 +44,7 @@
      ?>
 
    <form class="" action="#" method="post">
-     <label for="search">Search For :</label> <input type="text" name="search" value=""/> <br/>
+     <label for="search">Search For :</label> <input type="text" name="search" value="<?php if (isset($_POST['search'])) {echo $_POST['search'];} ?>"/><br/>
      <label for="site">Search on:</label>
         <select class="site" name="site">
           <option value="google">Google</option>
