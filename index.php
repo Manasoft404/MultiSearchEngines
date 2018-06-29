@@ -60,7 +60,6 @@
             <option value="offsite">On their site (current tab)</option>
             <option value="insite">On This site</option>
           </select>
-          <input type="submit">
    </form>
 
  </body>
