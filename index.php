@@ -1,5 +1,5 @@
 <?php
-  include("core/init.php");
+  include("{$path}/core/init.php");
   $errors = array();
   if (isset($_POST['site'],$_POST['search'],$_POST['type'])) {
     $url = make_url($_POST['site'],$_POST['search']);
