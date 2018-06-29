@@ -1,4 +1,5 @@
 <?php
+ echo "string";
   include("core/init.php");
   $errors = array();
   if (isset($_POST['site'],$_POST['search'],$_POST['type'])) {
